@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*,*::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: rgb(28,88,93);
+  background: linear-gradient(225deg, rgb(38, 110, 117) 0%, rgba(57,57,103,1) 100%);
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.calculator{
+  background: #1c1a2f;
+  width: 27em;
+  height: 40em;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.input_wrapper{
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+input{
+  border: transparent;
+  background: #1c1a2f;
+  max-width: 6em;
+  font-size: 4em;
+  text-align: right;
+  color: wheat;
+  cursor: default;
+}
+:focus{
+  outline: none;
+}
+.grid_container{
+  padding-top: 1em;
+  display: flex ;
+  justify-content: center;
+}
+.cells_wrapper{
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.cell{
+  font-weight: 200;
+  font-size: 2.7em;
+  text-align: center;
+  padding-top: 0.4em;
+
+  width: 2em;
+  height: 2em;
+  border-radius: 50px;
+
+}
+.wide{
+  width: 100%;
+  justify-self: center;
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.ver{
+  background: #c6f5ff;
+  transition: 0.2s;
+}.ver:hover{
+  background: #b0d9e2;
+  text-shadow: 0px 0px 5px rgb(164, 164, 164);
+}.ver:active{
+  background: #a5cad2;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+.hor{
+  background: #849afe;
+  transition: 0.2s;
+}.hor:hover{
+  background: #7184db;
+  text-shadow: 0px 0px 5px rgb(194, 194, 255);
+}.hor:active{
+  background: #6273bc;
+  text-shadow: 0px 0px 5px rgb(210, 210, 200);
+}
+.number{
   color: white;
+  background: rgba(92, 92, 92, 0.769);
+  transition: 0.2s;
+}.number:hover{
+  background: rgba(79, 79, 79, 0.769);
+  text-shadow: 0px 0px 5px #000000;
+}.number:active{
+  background: rgba(70, 70, 70, 0.769);
+  text-shadow: 0px 0px 5px rgb(194, 194, 255);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.x{
+  padding: 0.3em;
 }
